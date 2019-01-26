@@ -13,19 +13,6 @@ public class Movement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
 
         HandleMovement(horizontal);
-
-
-        //if (Input.GetKey("d"))
-        //{
-        //    rb2d.AddForce(new Vector2(forwardForce * Time.deltaTime, 0f));
-        //}
-
-        //if (Input.GetKey("a"))
-        //{
-        //    rb2d.AddForce(new Vector2(-forwardForce * Time.deltaTime, 0f));
-        //}
-
-        //rb2d.AddForce(Vector2.zero);
     }
 
     private void HandleMovement(float horizontal)

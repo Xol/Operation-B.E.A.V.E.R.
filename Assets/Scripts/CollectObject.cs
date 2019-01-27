@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CollectObject : MonoBehaviour
@@ -30,13 +28,8 @@ public class CollectObject : MonoBehaviour
             currentInterObject = null;
 
             highscoreInt++;
-
-
-            Debug.Log(highscoreInt.ToString());
-            Debug.Log(currentInterObject);
-
-            highscore.text = "TREFFER";
-
+            
+            highscore.text = highscoreInt.ToString();
         }
     }
 }

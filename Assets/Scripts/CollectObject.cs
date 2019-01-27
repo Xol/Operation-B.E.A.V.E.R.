@@ -17,7 +17,12 @@ public class CollectObject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("objectTree"))
+        if (collider.CompareTag("objectTree") && currentInterObject == null)
+        {
+            currentInterObject = collider.gameObject;
+        }
+
+        if (collider.CompareTag("objectStone") && currentInterObject == null)
         {
             currentInterObject = collider.gameObject;
         }

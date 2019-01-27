@@ -27,8 +27,26 @@ public class CollectObject : MonoBehaviour
             currentInterObject = collider.gameObject;
         }
 
+        if (collider.CompareTag("objectFridge") && currentInterObject == null)
+        {
+            currentInterObject = collider.gameObject;
+        }
 
-        if (collider.CompareTag("objectBarrage") && currentInterObject != null)
+
+        if (collider.CompareTag("objectBarrage") &&
+            currentInterObject.name == "ObjectFridge" &&
+            currentInterObject != null)
+        {
+            currentInterObject = null;
+
+            highscoreInt += 2;
+
+            highscore.text = highscoreInt.ToString();
+        }
+
+        if (collider.CompareTag("objectBarrage") && 
+            currentInterObject.name != "ObjectFridge" &&
+            currentInterObject != null)
         {       
             currentInterObject = null;
 
@@ -36,5 +54,6 @@ public class CollectObject : MonoBehaviour
             
             highscore.text = highscoreInt.ToString();
         }
+        
     }
 }

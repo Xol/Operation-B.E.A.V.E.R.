@@ -4,4 +4,4 @@
 
 Game for Global Game Jam 2019
 
-More Infos to come...
+Maybe it will be finished at some point.
